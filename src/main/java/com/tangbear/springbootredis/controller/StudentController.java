@@ -18,4 +18,9 @@ public class StudentController {
     public ResponseEntity setKey() {
         return ResponseEntity.ok(redisService.setKey("1", "BB"));
     }
+
+    @GetMapping("/test-webhook")
+    public ResponseEntity test() {
+        return ResponseEntity.ok().build();
+    }
 }
